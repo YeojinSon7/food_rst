@@ -12,17 +12,21 @@ def run_app_near():
 
     # 위도, 경도 반환하는 함수
     def geocoding(address):
+        
         li = []
         geolocator = Nominatim(user_agent='chiricuto')
-        location = geolocator.geocode(address)
 
-        latitude = location.latitude
-        longitude = location.longitude
-        li.append(longitude)
-        li.append(latitude)
-        return li
-        
-    address = geocoding(my_address)
+        try:
+            location = geolocator.geocode(address)
+            latitude = location.latitude
+            longitude = location.longitude
+        except AttributeError:
+            st.warning('해당 위치로 가까운 식당을 찾을 수 없습니다')
+        else:
+            li.append(longitude)
+            li.append(latitude)
+            return li
+         
     def findNearNum(exList, values):
         answer = 0 # answer 리스트 0으로 초기화
 
@@ -31,7 +35,18 @@ def run_app_near():
     
         return answer
     
-    st.dataframe(df.loc[df['FCLTY_LO']==findNearNum(df['FCLTY_LO'],address[0]), ])
+    if my_address != "":
+        address = geocoding(my_address)
+
+        try:
+            df3 = df.loc[df['FCLTY_LO']==findNearNum(df['FCLTY_LO'],address[0]), ]
+        except TypeError:
+            st.warning('올바른 위치를 입력해주세요')
+        else:
+            st.dataframe(df1.loc[df1['식당이름']==df3.iat[0,0], ])
+
+        
+       
     
     
         
