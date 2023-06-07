@@ -72,7 +72,7 @@ def run_app_home():
     st.divider()
     if st.button('👉지역별 식당 수'):
         fig = plt.figure()
-        sns.set(font_scale=0.8, 
+        sns.set(font='NanumGothic', font_scale=0.8, 
         rc={"axes.unicode_minus":False},
         style='darkgrid')
         ax2 = sns.countplot(x='지역', data=df1)
@@ -85,7 +85,7 @@ def run_app_home():
 
     if st.button('👉음식별 식당 수'):
         fig = plt.figure()
-        sns.set(font_scale=0.8, 
+        sns.set(font='NanumGothic',font_scale=0.8, 
         rc={"axes.unicode_minus":False},
         style='darkgrid')
         ax = sns.countplot(x='대표메뉴', data=df3)
