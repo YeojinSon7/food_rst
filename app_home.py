@@ -50,10 +50,10 @@ def run_app_home():
     df3 = df3.replace('양식종류','양식')
     df3.loc[df3['대표메뉴'].str.contains('크림치즈아인슈페너'),'대표메뉴'] = '음료종류'
     df3 = df3.replace('음료종류','음료')
-
+    st.divider()
     st.subheader('🍽️전국의 30년 이상된 식당 현황')
     st.dataframe(df4)
-    
+    st.divider()
     if st.button('🍴대표메뉴 가격이 가장 비싼 식당') :
         st.dataframe(df4.loc[df4['가격']==df4['가격'].max(),])
     
