@@ -68,18 +68,27 @@ def run_app_food():
 
 
     st.subheader('음식별 검색을 합니다')
+    df_list = [korea,china,japan,usa,cafe]
     food = ['한식','중식','일식','양식','음료']
-    selected_food= st.selectbox('음식 종류를 선택하세요',food)
-    if selected_food == '한식':
-        st.dataframe(korea)
-    elif selected_food == '중식':
-        st.dataframe(china)
-    elif selected_food == '일식':
-        st.dataframe(japan)
-    elif selected_food == '양식':
-        st.dataframe(usa)
-    elif selected_food == '음료':
-        st.dataframe(cafe)
+    df_select = []
+    column_list = st.multiselect('지역을 선택하세요',food)
+    if len(column_list) >= 1:
+        if column_list == '한식':
+            df_select.append(df_list[0])
+        elif column_list == '중식':
+            df_select.append(df_list[1])
+        elif column_list == '일식':
+            df_select.append(df_list[2])
+        elif column_list == '양식':
+            df_select.append(df_list[3])
+        elif column_list == '음료':
+            df_select.append(df_list[4])
+        st.dataframe(pd.concat(df_select, ignore_index=True))
+
+    # li = df1['지역'].unique()
+    # column_list = st.multiselect('지역을 선택하세요',li)
+    # if len(column_list) >= 1:
+    #     st.dataframe(df1[df1['지역'].isin(column_list)])
 
     st.subheader('뭘 먹을까?')
     food1 = ['뜨끈한 국/탕류','든든한 고기류','면러버 면류']

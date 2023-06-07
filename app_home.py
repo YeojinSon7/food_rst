@@ -61,7 +61,7 @@ def run_app_home():
     st.divider()
     st.subheader('🍽️전국의 30년 이상된 식당 현황')
     st.dataframe(df4)
-    link='-데이터 출처 [link](https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=af65689c-5a0f-4dd1-a91f-254d70053816)'
+    link='-데이터 출처: [link](https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=af65689c-5a0f-4dd1-a91f-254d70053816)'
     st.markdown(link,unsafe_allow_html=True)
     st.divider()
     if st.button('🍴대표메뉴 가격이 가장 비싼 식당') :
