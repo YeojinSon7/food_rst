@@ -59,6 +59,8 @@ def run_app_home():
     df3.loc[df3['대표메뉴'].str.contains('크림치즈아인슈페너'),'대표메뉴'] = '음료종류'
     df3 = df3.replace('음료종류','음료')
     st.divider()
+    if st.checkbox('원본 데이터 보기') == True: # 체크 설정과 해제 / 체크 누르면 True
+        st.dataframe(df)
     st.subheader('🍽️전국의 30년 이상된 식당 현황')
     st.dataframe(df4)
     link='-데이터 출처: [link](https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=af65689c-5a0f-4dd1-a91f-254d70053816)'
