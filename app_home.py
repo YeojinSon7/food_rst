@@ -3,9 +3,14 @@ import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+from matplotlib import font_manager, rc
+font_path = "C:/Windows/Fonts/malgun.TTF"
+font = font_manager.FontProperties(fname=font_path).get_name()
+rc('font', family=font)
+
 
 def run_app_home():
-    plt.rcParams['font.family'] = 'Malgun Gothic'
+    # plt.rcParams['font.family'] = 'Malgun Gothic'
     df = pd.read_csv('RB_THIRTY_YEARS_ABOVE_RSTRNT_INFO_20211231.csv')
     df1 = df.drop(['CTPRVN_CD','SIGNGU_CD','FCLTY_LO','FCLTY_LA','BASE_DE'],axis=1)
     df1.rename(columns={'FCLTY_NM':'식당이름','RDNMADR_NM':'도로명주소','AREA_NM':'지역','REPRSNT_MENU_NM':'대표메뉴','MENU_PRC':'가격'},inplace=True)
@@ -66,7 +71,7 @@ def run_app_home():
     st.divider()
     if st.button('👉지역별 식당 수'):
         fig = plt.figure()
-        sns.set(font="Malgun Gothic",font_scale=0.8, 
+        sns.set(font_scale=0.8, 
         rc={"axes.unicode_minus":False},
         style='darkgrid')
         ax2 = sns.countplot(x='지역', data=df1)
@@ -79,7 +84,7 @@ def run_app_home():
 
     if st.button('👉음식별 식당 수'):
         fig = plt.figure()
-        sns.set(font="Malgun Gothic",font_scale=0.8, 
+        sns.set(font_scale=0.8, 
         rc={"axes.unicode_minus":False},
         style='darkgrid')
         ax = sns.countplot(x='대표메뉴', data=df3)
