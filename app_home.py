@@ -71,8 +71,9 @@ def run_app_home():
 
     st.subheader('🍽️전국의 30년 이상된 식당 현황')
     st.dataframe(df4)
-    tup = df4.shape
-    st.write('- 데이터 크기:'.join(tup))
+    tup = df4.shape()
+    str = ''.join(tup)
+    st.write('- 데이터 크기: '+str)
     link='-데이터 출처: [link](https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=af65689c-5a0f-4dd1-a91f-254d70053816)'
     st.markdown(link,unsafe_allow_html=True)
     st.divider()
