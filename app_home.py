@@ -59,7 +59,7 @@ def run_app_home():
     
     if st.button('🍴대표메뉴 가격이 가장 싼 식당') :
         st.dataframe(df4.loc[df4['가격']==df4['가격'].min(),])
-
+    st.divider()
     if st.button('👉지역별 식당 수'):
         fig = plt.figure()
         sns.set(font="Malgun Gothic",font_scale=0.8, 
