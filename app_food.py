@@ -66,7 +66,7 @@ def run_app_food():
     test5 = '|'.join(li8)
     noodle = df1[df1['대표메뉴'].str.contains(test5)]
 
-
+    st.divider()
     st.subheader('음식별 검색을 합니다') # 여러개 선택하게 하려고 했는데 좀 복잡해서 안함
     food = ['한식','중식','일식','양식','음료']
     selected_food= st.selectbox('음식 종류를 선택하세요',food)
