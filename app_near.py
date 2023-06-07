@@ -7,6 +7,7 @@ def run_app_near():
     df = pd.read_csv('RB_THIRTY_YEARS_ABOVE_RSTRNT_INFO_20211231.csv')
     df1 = df.drop(['CTPRVN_CD','SIGNGU_CD','FCLTY_LO','FCLTY_LA','BASE_DE'],axis=1)
     df1.rename(columns={'FCLTY_NM':'식당이름','RDNMADR_NM':'도로명주소','AREA_NM':'지역','REPRSNT_MENU_NM':'대표메뉴','MENU_PRC':'가격'},inplace=True)
+    st.divider()
     st.subheader('가장 가까운 식당을 검색합니다')
     my_address = st.text_input('현재 위치를 입력하세요(시/군/구, 동까지)')
     
