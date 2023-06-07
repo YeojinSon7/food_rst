@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 from geopy.geocoders import Nominatim
+from geopy.exc import GeocoderTimedOut
 
 def run_app_near():
     df = pd.read_csv('RB_THIRTY_YEARS_ABOVE_RSTRNT_INFO_20211231.csv')
@@ -11,7 +12,7 @@ def run_app_near():
     
 
     # 위도, 경도 반환하는 함수
-    def geocoding(address):
+    def geocoding(address,attempt=1, max_attempts=5):
         
         li = []
         geolocator = Nominatim(user_agent='chiricuto')
@@ -22,6 +23,9 @@ def run_app_near():
             longitude = location.longitude
         except AttributeError:
             st.warning('해당 위치로 가까운 식당을 찾을 수 없습니다')
+        except GeocoderTimedOut:
+            if attempt <= max_attempts:
+                return geocoding(address, attempt=attempt+1)
         else:
             li.append(longitude)
             li.append(latitude)
@@ -45,7 +49,10 @@ def run_app_near():
         else:
             st.dataframe(df1.loc[df1['식당이름']==df3.iat[0,0], ])
 
-        
+
+
+    
+   
        
     
     

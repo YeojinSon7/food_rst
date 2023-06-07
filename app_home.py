@@ -7,6 +7,8 @@ def run_app_home():
     df = pd.read_csv('RB_THIRTY_YEARS_ABOVE_RSTRNT_INFO_20211231.csv')
     df1 = df.drop(['CTPRVN_CD','SIGNGU_CD','FCLTY_LO','FCLTY_LA','BASE_DE'],axis=1)
     df1.rename(columns={'FCLTY_NM':'식당이름','RDNMADR_NM':'도로명주소','AREA_NM':'지역','REPRSNT_MENU_NM':'대표메뉴','MENU_PRC':'가격'},inplace=True)
+    df4 = df.drop(['CTPRVN_CD','SIGNGU_CD','FCLTY_LO','FCLTY_LA','BASE_DE'],axis=1)
+    df4.rename(columns={'FCLTY_NM':'식당이름','RDNMADR_NM':'도로명주소','AREA_NM':'지역','REPRSNT_MENU_NM':'대표메뉴','MENU_PRC':'가격'},inplace=True)
     df2 = df1.dropna(axis=0)
     df1.loc[df1['대표메뉴'] == '자장면','대표메뉴'] = '짜장면'
     df3 = df1
@@ -50,13 +52,13 @@ def run_app_home():
     df3 = df3.replace('음료종류','음료')
 
     st.subheader('🍽️전국의 30년 이상된 식당 현황')
-    st.dataframe(df1)
+    st.dataframe(df4)
     
     if st.button('🍴대표메뉴 가격이 가장 비싼 식당') :
-        st.dataframe(df1.loc[df1['가격']==df1['가격'].max(),])
+        st.dataframe(df4.loc[df4['가격']==df4['가격'].max(),])
     
     if st.button('🍴대표메뉴 가격이 가장 싼 식당') :
-        st.dataframe(df1.loc[df1['가격']==df1['가격'].min(),])
+        st.dataframe(df4.loc[df4['가격']==df4['가격'].min(),])
 
     if st.button('👉지역별 식당 수'):
         fig = plt.figure()

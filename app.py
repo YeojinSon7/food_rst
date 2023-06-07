@@ -8,7 +8,7 @@ from app_near import run_app_near
 
 def main() :
     st.title(':orange[특]별한 :orange[식]당을 찾는 :orange[당]신을 위해')
-    menu = ['home','지역별 검색','음식별 검색','가격별 검색','가까운 식당']
+    menu = ['Home','지역별 검색','음식별 검색','가격별 검색','가까운 식당']
     st.subheader('전국에 있는 :red[30년] 이상된 :blue[식당]을 알려드립니다')
     st.sidebar.image('https://cdn-icons-png.flaticon.com/512/7591/7591647.png')
     st.sidebar.title('특식당')
