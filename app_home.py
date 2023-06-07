@@ -2,6 +2,8 @@ import pandas as pd
 import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
+plt.rcParams['font.family'] = 'Malgun Gothic'
+
 
 def run_app_home():
     df = pd.read_csv('RB_THIRTY_YEARS_ABOVE_RSTRNT_INFO_20211231.csv')
@@ -53,7 +55,7 @@ def run_app_home():
     st.divider()
     st.subheader('🍽️전국의 30년 이상된 식당 현황')
     st.dataframe(df4)
-    link='데이터 출처 [link](https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=af65689c-5a0f-4dd1-a91f-254d70053816)'
+    link='-데이터 출처 [link](https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=af65689c-5a0f-4dd1-a91f-254d70053816)'
     st.markdown(link,unsafe_allow_html=True)
     st.divider()
     if st.button('🍴대표메뉴 가격이 가장 비싼 식당') :
