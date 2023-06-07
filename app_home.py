@@ -3,10 +3,11 @@ import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+import platform
 from matplotlib import font_manager, rc
-font_path = "C:/Windows/Fonts/malgun.TTF"
-font = font_manager.FontProperties(fname=font_path).get_name()
-rc('font', family=font)
+plt.rcParams['axes.unicode_minus'] = False
+if platform.system() == 'Linux':
+    rc('font', family='NanumGothic')
 
 
 def run_app_home():
