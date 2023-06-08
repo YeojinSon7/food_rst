@@ -14,5 +14,8 @@
  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white"/> <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white"/>
  
 4. 사용한 이미지/gif
-- 출처: https://greatplacetowork.me/wp-content/uploads/2022/09/mental-employe-mindset-health-progress-UAE-e1662518588611.jpg
+- [https://greatplacetowork.me/wp-content/uploads/2022/09/mental-employe-mindset-health-progress-UAE-e1662518588611.jpg](https://cdn-icons-png.flaticon.com/512/7591/7591647.png)
+- https://s3.orbi.kr/data/file/united/2109569778_eZanPj5s_2.gif
+- https://t1.daumcdn.net/news/202304/26/xportsnews/20230426185004651iayp.jpg
+- https://mblogthumb-phinf.pstatic.net/MjAxOTEwMDJfMTc0/MDAxNTY5OTQ0NDY2MDQ1.XauUSNaEiU5w0xmbpBiml9UIKokFLBrw0jXAzNchFgwg.WEhATJjroUiyMBFAx7WOBCSONL-iymr6MjjPnbWemX8g.GIF.pure082/1569944464188.gif?type=w800
 
