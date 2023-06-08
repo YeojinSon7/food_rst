@@ -25,7 +25,7 @@
 - 가격별 식당수>
 
 ![가격별식당수](https://github.com/YeojinSon7/food_rst/assets/130967465/e67d60b9-8f0c-4f37-ba75-20a7368165d6)
-- 가격이 최대/최소 식당정보>
+- 가격이 최대/최소인 식당정보>
 
 ![최대가격식당](https://github.com/YeojinSon7/food_rst/assets/130967465/29c4765c-50da-428e-b8b2-6675a4a3ff04)
 ![최소가격식당](https://github.com/YeojinSon7/food_rst/assets/130967465/2df51eeb-13d1-4a9d-be60-53ad3062b631)
