@@ -1,5 +1,6 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=food_rst&fontSize=55" />
 - 앱 대시보드: http://43.200.244.94:8501/
+
 1. 앱 설명
 - 이 앱은 30년 이상된 식당 정보를 제공하고 지역, 음식종류, 가격, 현재 위치에따른 음식점 정보를 알려줍니다.
 
