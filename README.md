@@ -13,6 +13,14 @@
  
  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white"/> <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white"/>
  
+3. 데이터 분석
+-  데이터의 크기) (22750,9)
+-  분석결과 시각화)
+- 지역별 식당수>
+- 음식종류별 식당수>
+- 가격별 식당수>
+- 가격이 최대/최소 식당정보>
+ 
 4. 사용한 이미지/gif
 - [https://greatplacetowork.me/wp-content/uploads/2022/09/mental-employe-mindset-health-progress-UAE-e1662518588611.jpg](https://cdn-icons-png.flaticon.com/512/7591/7591647.png)
 - https://s3.orbi.kr/data/file/united/2109569778_eZanPj5s_2.gif
