@@ -93,10 +93,4 @@ def run_app_food():
     elif selected_food1 == '면러버 면류':
         st.markdown("![Alt Text](https://mblogthumb-phinf.pstatic.net/MjAxOTEwMDJfMTc0/MDAxNTY5OTQ0NDY2MDQ1.XauUSNaEiU5w0xmbpBiml9UIKokFLBrw0jXAzNchFgwg.WEhATJjroUiyMBFAx7WOBCSONL-iymr6MjjPnbWemX8g.GIF.pure082/1569944464188.gif?type=w800)")
         st.dataframe(noodle)
-    st.divider()
-    link='-국/탕류 먹는 gif 출처: [link](https://s3.orbi.kr/data/file/united/2109569778_eZanPj5s_2.gif)'
-    st.markdown(link,unsafe_allow_html=True)
-    link2='-고기 먹는 이미지 출처: [link](https://t1.daumcdn.net/news/202304/26/xportsnews/20230426185004651iayp.jpg)'
-    st.markdown(link2,unsafe_allow_html=True)
-    link3='-면 먹는 gif 출처: [link](https://mblogthumb-phinf.pstatic.net/MjAxOTEwMDJfMTc0/MDAxNTY5OTQ0NDY2MDQ1.XauUSNaEiU5w0xmbpBiml9UIKokFLBrw0jXAzNchFgwg.WEhATJjroUiyMBFAx7WOBCSONL-iymr6MjjPnbWemX8g.GIF.pure082/1569944464188.gif?type=w800)'
-    st.markdown(link3,unsafe_allow_html=True)
+    
