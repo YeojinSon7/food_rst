@@ -64,7 +64,7 @@ def run_app_home():
     'explain':['시설명','도로명주소','시도코드','시군구코드','시설경도','시설위도','지역명','대표메뉴명','메뉴가격','기준일자'],
 })  
     st.divider()
-    st.markdown('-  원본 데이터의 :orange[CTPRVN_CD, SIGNGU_CD, FCLTY_LO, FCLTY_LA, BASE_DE] 컬럼은 이용자에게 필요없다고 판단하여 제외시켰고, :blue[FCLTY_NM]:식당이름,:blue[RDNMADR_NM]:도로명주소,:blue[AREA_NM]:지역,:blue[REPRSNT_MENU_NM]:대표메뉴,:blue[MENU_PRC]:가격으로 바꿔서 이용자가 보기 편하게 만들었습니다 ')
+    st.markdown('-  원본 데이터의 :orange[CTPRVN_CD, SIGNGU_CD, FCLTY_LO, FCLTY_LA, BASE_DE] 컬럼은 이용자에게 필요없다고 판단하여 제외시켰고, :blue[FCLTY_NM]:**식당이름**,:blue[RDNMADR_NM]:**도로명주소**,:blue[AREA_NM]:**지역**,:blue[REPRSNT_MENU_NM]:***대표메뉴**,:blue[MENU_PRC]:**가격**으로 바꿔서 이용자가 보기 편하게 만들었습니다 ')
     if st.checkbox('원본 데이터 보기') == True: # 체크 설정과 해제 / 체크 누르면 True
         st.dataframe(df)
         if st.checkbox('원본 데이터 설명') == True:
